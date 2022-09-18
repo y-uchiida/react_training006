@@ -30,16 +30,16 @@ const counterReducer: Reducer = (state = 0, action) => {
 };
 
 // store
-let store = createStore(counterReducer);
+// let store = createStore(counterReducer);
 
-store.subscribe(() => console.log(store.getState()));
+// store.subscribe(() => console.log(store.getState()));
 
 //dispatch: イベントハンドラを通じて、actionの発生をStoreに通知する
-store.dispatch(increment()); // 初期値 0 -> 1
-store.dispatch(increment()); // 元の値 1 -> 2
+// store.dispatch(increment()); // 初期値 0 -> 1
+// store.dispatch(increment()); // 元の値 1 -> 2
 
-store.dispatch(decrement()); // 元の値 2 -> 1
-store.dispatch(decrement()); // 元の値 1 -> 0
+// store.dispatch(decrement()); // 元の値 2 -> 1
+// store.dispatch(decrement()); // 元の値 1 -> 0
 
 
 export const StoreSample = () => {
