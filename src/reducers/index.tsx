@@ -1,13 +1,18 @@
 // reducer をまとめる処理の型をインポート
 import { combineReducers } from "redux";
 
-import counterReducer from "./counter";
-import isLoginReducer from "./isLogin";
+import { counterReducer, initialCounter } from "./counter";
+import { isLoginReducer, initialIsLogin } from "./isLogin";
+
 
 // reducer を取りまとめて返す
-const allReducers = combineReducers({
+export const allReducers = combineReducers({
 	counter: counterReducer,
 	isLogin: isLoginReducer
 });
 
-export default allReducers;
+// 初期値を設定
+export const initialState: ReactReduxSampleStates = {
+	...initialCounter,
+	...initialIsLogin
+}
